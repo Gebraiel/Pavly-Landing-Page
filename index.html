@@ -40,6 +40,9 @@
                 font-size:30px;
             }
         }
+        .logo{
+            max-width: 200px;
+        }
         .dynamic-typing{
             position: relative;
             white-space: nowrap; /* Prevents text from wrapping */
@@ -101,32 +104,40 @@
         }
 
         .facebook{
-            background-color: #1877F2;
             color:white;        
         }
-       
+        .facebook:hover{
+            background-color: #1877F2;
+        }
         .x{
-            background-color: #131418;
+
             color:white;        
         }
         .x:hover{
-           
+            background-color: #131418;
+
         }
         .instagram{
+            color:white;
+        }
+        .instagram:hover{
             background-color: #E4405F;
-            color:white;
+
         }
-        
         .dribble{
+            color:white;
+        }
+        .dribble:hover{
             background-color: #ea4c89;
-            color:white;
-        }
 
+        }
         .whatsapp{
-            background-color: #25D366;
             color:white;
         }
+        .whatsapp:hover{
+            background-color: #25D366;
 
+        }
         .behance-button{
             border:2px solid #005CFF;
             color: #005CFF;
@@ -181,7 +192,13 @@
     </style>
 </head>
 
-<body class="d-flex justify-content-center align-items-center">
+
+<body class="d-flex flex-column ">
+    <header>
+        <div class="logo m-auto">
+            <img src="images/logo.png" class="img-fluid" alt="">
+        </div>
+    </header>
     <main class="overflow-hidden">
         <div class="container text-center my-3">
             <div class="avatar m-auto mb-4">
