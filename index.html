@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon !</title>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="icon" href="images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <style>
         *{
             padding:0 ;
@@ -22,9 +24,21 @@
         }
         body{
             min-height: 100vh;
+            background-color: black;
+            color:white;
         }
         h1{
             font-size:80px ;
+        }
+        @media(max-width:775px){
+            h1{
+                font-size:50px;
+            }
+        }
+        @media(max-width:570px){
+            h1{
+                font-size:30px;
+            }
         }
         .dynamic-typing{
             position: relative;
@@ -39,8 +53,8 @@
             top:0;
             width: 100%;
             height: 100%;
-            background-color: white;
-            animation: typing 2s steps(8) infinite  ,flashing 0.5s steps(8) infinite;
+            background-color: black;
+            animation: typing 3s steps(14) infinite  ,flashing 0.5s steps(8) infinite;
             border-left:5px solid transparent;
         }
         .typing-words{
@@ -49,10 +63,10 @@
 
         .highlight-text{
             position: relative;
-            color:black;
+            color:#005CFF;
             padding:5px;
             transition: 0.3s;
-
+            font-weight: bold;
         }
         .highlight-text::before{
             content:"";
@@ -83,31 +97,36 @@
             padding:20px;
             height:1px;
             border-radius: 50%;
-            background-color: white;
             transition: 0.3s;
         }
 
         .facebook{
-            color:#1877F2;
-        }
-        .facebook:hover{
             background-color: #1877F2;
-            color:white;
+            color:white;        
         }
+       
         .x{
-            color:#131418
+            background-color: #131418;
+            color:white;        
         }
         .x:hover{
-            background-color: #131418;
-            color:white;
+           
         }
         .instagram{
-            color:#E4405F;
-        }
-        .instagram:hover{
             background-color: #E4405F;
             color:white;
         }
+        
+        .dribble{
+            background-color: #ea4c89;
+            color:white;
+        }
+
+        .whatsapp{
+            background-color: #25D366;
+            color:white;
+        }
+
         .behance-button{
             border:2px solid #005CFF;
             color: #005CFF;
@@ -127,6 +146,9 @@
             background-color: #005CFF;
             z-index: -1;
             transition: 0.3s;
+        }
+        .highlighted-text{
+            color: #005CFF;
         }
         .behance-button:hover{
             color:white;
@@ -149,7 +171,7 @@
         @keyframes flashing {
 
             50%{
-                border-color:black;
+                border-color:#005CFF;
             }
             100%{
                 border-color: transparent;
@@ -166,32 +188,33 @@
                 <img class="img-fluid rounded-circle" src="images/avatar.jpeg" alt="">
             </div>
             <div>
-                <h1><span class="dynamic-typing">Gebraiel</span></h1>
+                <h1>Pavly Wagih <span class="dynamic-typing highlighted-text">Brand Designer</span></h1>
             </div>
             <div class="my-5 fs-5">
                 <p>
-                    I use design to add value utilizing the best strategy and the highest capabilities of media to add value for my clients. I also work with visual artists, fashion designers, restaurants and event planners to create strong visuals that complement strong brands and stories .
-                </p>
+                    transforms design into a powerful tool for strategic brand enhancement. By harnessing top-tier media capabilities, he adds significant value to his clients' projects. His work extends beyond design, collaborating with visual artists, fashion designers, restaurants, and event planners to craft impactful visuals that bring brands and their narratives to life.                </p>
                 <p>
-                    I’m Also <span class="highlight-text">Tech content creator</span> and Telegram <span class="highlight-text">Blogger</span>
+                    Contact me by <a href="mailto:hi@pavlywagih.com" class="highlight-text">Email</a> or <a href="https://wa.link/qb5h11"class="highlight-text">Whatsapp</a>
                 </p>
     
             </div>
             <ul class="d-flex justify-content-center gap-2">
-                <li class="facebook"><a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li class="x"><a href="facebook.com"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li class="instagram"><a href="facebook.com"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="instagram"><a href="https://www.instagram.com/pavlywagih_/"><i class="fa-brands fa-instagram"></i></a></li>
+
+                <li class="facebook"><a href="https://www.facebook.com/pavlyai"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="x"><a href="https://x.com/pavlyai"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li class="whatsapp"><a href="https://wa.link/qb5h11"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li class="dribble"><a href="https://dribbble.com/pavlyai"><i class="fa-brands fa-dribbble"></i></a></li>
             </ul>
             <div class="behance-button p-3 px-5 m-auto">
-                <a class=""><i class="fa-brands fa-behance"></i> See My Work</a>
-
+                <a href="https://www.behance.net/pavlyai"><i class="fa-brands fa-behance"></i> See My Work</a>
             </div>
         </div>
     </main>
     <div>
         
     </div>
-    <div class="typing-words">
+    <!-- <div class="typing-words">
         <p>Malak</p>
         <p>Adly</p>
         <p>Gebraiel</p>
@@ -211,6 +234,6 @@
                 i = 0;
         } , 2000)
         
-    </script>   
+    </script>    -->
 </body>
 </html>
