@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding:0 ;
+            margin:0;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        a{
+            color:inherit;
+            text-decoration: none;
+        }
+        body{
+            min-height: 100vh;
+        }
+        h1{
+            font-size:80px ;
+        }
+        .dynamic-typing{
+            position: relative;
+            white-space: nowrap; /* Prevents text from wrapping */
+            overflow: hidden; /* Hides any overflow from longer text */
+            letter-spacing: 1px;
+        }
+        .dynamic-typing::before{
+            content:"";
+            position: absolute;
+            left:0%;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            animation: typing 2s steps(8) infinite  ,flashing 0.5s steps(8) infinite;
+            border-left:2px solid transparent;
+        }
+        .typing-words{
+            display: none;
+        }
+
+        .highlight-text{
+            position: relative;
+            color:black;
+            padding:5px;
+            transition: 0.3s;
+
+        }
+        .highlight-text::before{
+            content:"";
+            width:100%;
+            height: 1px;
+            position: absolute;
+            bottom:0;
+            left:0;
+            background-color: #005CFF;
+            z-index: -1;
+            transition: 0.3s;
+        }
+        .highlight-text:hover{
+            color:white;
+        }
+        .highlight-text:hover::before{
+            height: 100%;
+        }
+        .avatar{
+            width:200px;
+            height: 200px;
+        }
+        ul li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:1px;
+            padding:20px;
+            height:1px;
+            border-radius: 50%;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        .facebook{
+            color:#1877F2;
+        }
+        .facebook:hover{
+            background-color: #1877F2;
+            color:white;
+        }
+        .x{
+            color:#131418
+        }
+        .x:hover{
+            background-color: #131418;
+            color:white;
+        }
+        .instagram{
+            color:#E4405F;
+        }
+        .instagram:hover{
+            background-color: #E4405F;
+            color:white;
+        }
+        .behance-button{
+            border:2px solid #005CFF;
+            color: #005CFF;
+            font-weight: 600;
+            width:fit-content;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .behance-button::before{
+            content:"";
+            position: absolute;
+            left:-100%;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-color: #005CFF;
+            z-index: -1;
+            transition: 0.3s;
+        }
+        .behance-button:hover{
+            color:white;
+        }
+        .behance-button:hover::before{
+            left:0;
+        }
+        @keyframes typing {
+            0%{
+                left:0%;
+            }
+            30% ,90%{
+                left:100%;
+            }
+
+            100%{
+                left:0%;
+            }
+        }
+        @keyframes flashing {
+
+            50%{
+                border-color:black;
+            }
+            100%{
+                border-color: transparent;
+            }
+
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center">
+    <main class="">
+        <div class="container text-center my-3">
+            <div class="avatar m-auto mb-4">
+                <img class="img-fluid rounded-circle" src="images/avatar.jpeg" alt="">
+            </div>
+            <div>
+                <h1><span class="dynamic-typing">Gebraiel</span></h1>
+            </div>
+            <div class="my-5 fs-5">
+                <p>
+                    I use design to add value utilizing the best strategy and the highest capabilities of media to add value for my clients. I also work with visual artists, fashion designers, restaurants and event planners to create strong visuals that complement strong brands and stories .
+                </p>
+                <p>
+                    I’m Also <span class="highlight-text">Tech content creator</span> and Telegram <span class="highlight-text">Blogger</span>
+                </p>
+    
+            </div>
+            <ul class="d-flex justify-content-center gap-2">
+                <li class="facebook"><a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="x"><a href="facebook.com"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li class="instagram"><a href="facebook.com"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+            <div class="behance-button p-3 px-5 m-auto">
+                <a class=""><i class="fa-brands fa-behance"></i> See My Work</a>
+
+            </div>
+        </div>
+    </main>
+    <div>
+        
+    </div>
+    <div class="typing-words">
+        <p>Malak</p>
+        <p>Adly</p>
+        <p>Gebraiel</p>
+    </div>
+    <script>
+        let ps = document.querySelectorAll('.typing-words p');
+        let words = [];
+        let span = document.querySelector('.dynamic-typing')
+        ps.forEach((word)=>{
+            words.push(word.textContent);
+        })
+        let i = 0;
+        setInterval(()=> {
+            let word = words[i++];
+            span.textContent = word;
+            if(i === words.length)
+                i = 0;
+        } , 2000)
+        
+    </script>   
+</body>
+</html>
