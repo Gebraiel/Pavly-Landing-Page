@@ -206,11 +206,11 @@
                 <img class="img-fluid rounded-circle" src="images/avatar.jpeg" alt="">
             </div>
             <div>
-                <h1> <span class="dynamic-typing highlighted-text">Pavly Wagih</span></h1>
+                <h1> <span class="dynamic-typing ">Pavly Wagih</span></h1>
             </div>
             <div class="my-5 fs-5">
                 <p>
-                    transforms design into a powerful tool for strategic brand enhancement. By harnessing top-tier media capabilities, he adds significant value to his clients' projects. His work extends beyond design, collaborating with visual artists, fashion designers, restaurants, and event planners to craft impactful visuals that bring brands and their narratives to life.                </p>
+                    Transforms design into a powerful tool for strategic brand enhancement. By harnessing top-tier media capabilities, he adds significant value to his clients' projects. His work extends beyond design, collaborating with visual artists, fashion designers, restaurants, and event planners to craft impactful visuals that bring brands and their narratives to life.                </p>
                 <p>
                     Contact me by <a href="mailto:hi@pavlywagih.com" class="highlight-text">Email</a> or <a href="https://wa.link/qb5h11" target="_blank" class="highlight-text">Whatsapp</a>
                 </p>
@@ -232,7 +232,7 @@
         
     </div>
     <div class="typing-words">
-        <p>Brand Designer</p>
+        <p><span class="fw-bolder">Brand Designer</span></p>
         <p>Pavly Wagih</p>
     </div>
     <script>
@@ -240,12 +240,12 @@
         let words = [];
         let span = document.querySelector('.dynamic-typing')
         ps.forEach((word)=>{
-            words.push(word.textContent);
+            words.push(word.innerHTML);
         })
         let i = 0;
         setInterval(()=> {
             let word = words[i++];
-            span.textContent = word;
+            span.innerHTML = word;
             if(i === words.length)
                 i = 0;
         } , 3000)
