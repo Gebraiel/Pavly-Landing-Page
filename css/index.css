@@ -8,11 +8,7 @@
     src: url(../fonts/ttf/glancyr-glancyr-semibold-600.ttf);
     font-weight: 600;
 }
-@font-face {
-    font-family: "glancyr";
-    src: url(../fonts/ttf/glancyr-glancyr-bold-700.ttf);
-    font-weight: 700;
-}
+
 html{
     --primary-color:#005CFF;
     --bg-color:black;
@@ -33,9 +29,11 @@ body{
     min-height: 100vh;
     background-color: var(--bg-color);
     color:white;
-    font-family: "glancyr",sans-serif;
 }
+.font-glancyr{
+    font-family: "glancyr",sans-serif;
 
+}
 
 .logo{
     max-width: 400px;
