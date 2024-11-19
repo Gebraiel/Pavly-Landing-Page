@@ -27,8 +27,18 @@
             background-color: black;
             color:white;
         }
+
+
+        .logo{
+            max-width: 400px;
+        }
         .dynamic-typing{
+            position: relative;
+            white-space: nowrap; /* Prevents text from wrapping */
+            overflow: hidden; /* Hides any overflow from longer text */
+            letter-spacing: 1px;
             font-size:80px ;
+
         }
         @media(max-width:775px){
             .dynamic-typing{
@@ -40,15 +50,7 @@
                 font-size:30px;
             }
         }
-        .logo{
-            max-width: 400px;
-        }
-        .dynamic-typing{
-            position: relative;
-            white-space: nowrap; /* Prevents text from wrapping */
-            overflow: hidden; /* Hides any overflow from longer text */
-            letter-spacing: 1px;
-        }
+
         .dynamic-typing::before{
             content:"";
             position: absolute;
@@ -206,7 +208,7 @@
                 <img class="img-fluid rounded-circle" src="images/avatar.jpeg" alt="">
             </div>
             <div>
-                <p> <span class="dynamic-typing fw-light">Pavly Wagih</span></p>
+                 <span class="dynamic-typing">Pavly Wagih</span>
             </div>
             <div class="my-5 fs-5">
                 <p>
@@ -214,7 +216,6 @@
                 <p>
                     Contact me by <a href="mailto:hi@pavlywagih.com" class="highlight-text">Email</a> or <a href="https://wa.link/qb5h11" target="_blank" class="highlight-text">Whatsapp</a>
                 </p>
-    
             </div>
             <ul class="d-flex justify-content-center gap-2">
                 <li class="instagram"><a href="https://www.instagram.com/pavlywagih_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
